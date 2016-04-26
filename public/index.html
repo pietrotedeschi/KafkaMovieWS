@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Spark Streaming Collaborative Filtering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="styles/moviedash.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="moviedash">
+<div class="container-fluid">
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">Spark Collaborative Filtering</a>
+          <a class="navbar-brand" href="#/">Vote</a>
+          <a class="navbar-brand" href="#/results">Results</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template" ng-controller="VoteController" ng-switch on="pagename()">
+        <h1 ng-switch-when="/">Rate your favorite Movies</h1>
+        <h1 ng-switch-when="/results">Recommended Movies for you!</h1>
+        <p class="lead">Information obtained by <a href="http://omdbapi.com/">OMDB API</a></p>
+
+        <div ng-view="" class="starter-template">
+        
+        </div>
+      </div>
+
+      
+
+    </div>
+</div>
+<script src='/socket.io/socket.io.js'></script>
+<script src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script src="scripts/vendor/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/services/vote.js"></script>
+<script src="scripts/controllers/vote.js"></script>
+<script src="scripts/vendor/star-rating.js"></script>
+</body>
+</html>

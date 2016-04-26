@@ -1,0 +1,39 @@
+<div class="row list-group">
+<div class="col-xs-4 col-lg-4 list-group-item" ng-controller="VoteController" ng-repeat="m in result">
+<img ng-src="{{ m.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : m.Poster }}" class="thumbnail animated flip movie-poster">
+
+        <span class="span-outer">
+          <a href="http://imdb.com/title/{{ m.imdbID }}" target="_blank">{{ m.Title }}</a>
+        </span>, {{ m.Year }}
+
+        <p><strong>Released on:</strong> {{ m.Released }} ({{ m.Runtime }})</p>
+
+        <p>{{ m.Plot }}</p>
+
+    <!--     <p class="outer-p">
+          <div class="inner-p">
+            <span class="label label-primary">Directors :</span> {{ m.Director }}
+          </div>
+          <div class="inner-p">
+            <span class="label label-primary">Actors :</span> {{ m.Actors }}
+          </div>
+          <div class="inner-p">
+            <span class="label label-primary">Genre :</span> {{ m.Genre }}
+          </div>
+        </p>
+
+        <p class="outer-p-2">
+          <strong>IMDb Rating</strong>: <span class="label label-success">{{ m.imdbRating }}</span>
+        </p> -->
+</div>
+<!--  <div class="col-md-8 col-md-offset-2" ng-controller="ChatController">    
+        <div scroll-div to-watch="messages" class="jumbotron message-area" style="font-size : 14px">
+            <div ng-repeat="message in messages" class='alert message-text {{message.colour}}'
+                 style='padding : 5px;padding-left: 10px;margin-bottom : 10px'>{{message}}
+            </div>
+        </div>     
+         <ul class="list-group">
+          <li class="list-group-item" ng-repeat="m in messages">{{m.title}}</li>        
+        </ul>
+        </div> -->
+</div>    
